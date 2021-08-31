@@ -23,11 +23,12 @@ Thanks for checking out this front-end coding challenge.
 
 ### Built with
 
-- Flexbox
+- HTML, CSS
 - Mobile-first workflow
 
 ### What I learned
 - postion absolute inside relative parent
+- background-position
 
 ## Author
 

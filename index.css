@@ -1,0 +1,158 @@
+.primary {
+  color: hsl(238, 29%, 16%);
+  color: hsl(14, 88%, 65%);
+}
+
+.text {
+  color: hsl(237, 12%, 33%);
+  color: hsl(240, 6%, 50%);
+}
+
+.divider {
+  color: hsl(240, 5%, 91%);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+:root {
+  --bg-color: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+html, body {
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-image: var(--bg-color);
+}
+
+#container {
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clicked .faq-item-question {
+  font-weight: 700;
+}
+
+.clicked .faq-item-question::after {
+  transform: rotateX(180deg);
+}
+
+.faq-item {
+  color: hsl(237, 12%, 33%);
+  font-size: 1.2rem;
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+  border-bottom-color: hsl(240, 5%, 91%);
+  padding: 15px;
+  padding-left: 0;
+}
+
+.faq-item-question::after {
+  float: right;
+  content: url('./images/icon-arrow-down.svg');
+}
+
+.faq-item-expand {
+  font-size: 1rem;
+  color: hsl(240, 6%, 50%);
+}
+
+@media only screen and (max-width: 375px) {
+  #container {
+    width: 85%;
+  }
+  #box {
+    display: none;
+  }
+  #faq {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  #faq-container {
+    padding: 25px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+  }
+  #faq-container h1 {
+    text-align: center;
+  }
+  #faq-image {
+    margin-bottom: 100px;
+  }
+  #mobile-faq-image {
+    position: absolute;
+    top: -1%;
+    left: 3%;
+  }
+  #mobile-faq-pattern {
+    position: absolute;
+    top: 16%;
+    left: 11%;
+  }
+  .faq-item {
+    font-size: 1.1rem;
+  }
+  .faq-item-expand {
+    font-size: 0.9rem;
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  #container {
+    width: 65%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  }
+  #image {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: -550px -300px;
+  }
+  #faq {
+    float: right;
+    width: 50%;
+  }
+  #mobile-faq-image, #mobile-faq-pattern {
+    display: none;
+  }
+  #faq-container {
+    padding: 40px;
+    padding-left: 0;
+  }
+  #faq-image {
+    background-image: url('./images/illustration-woman-online-desktop.svg');
+    background-repeat: no-repeat;
+    background-position-x: -60px;
+    background-position-y: center;
+    height: 500px;
+  }
+  #faq-list-container {
+    width: 85%;
+  }
+  #box {
+    display: block;
+    position: absolute;
+    left: -10%;
+    top: 40%;
+  }
+}
